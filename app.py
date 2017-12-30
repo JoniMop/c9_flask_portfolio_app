@@ -3,7 +3,7 @@ import datetime
 import pytz # timezone 
 import requests
 import os
-
+from sklearn import tree
 
 
 app = Flask(__name__)
@@ -36,6 +36,26 @@ def add_numbers_post():
 
 
 @app.route('/shopping_list', methods=['GET','POST'])
+
+#[height, weight, shoe size]
+# give data set
+X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [166, 65, 40], [190,90,47], [175,64,39], [177,70,40], [159, 55, 37], [171, 75, 42], [181, 85,43]]
+
+# what it can be 
+Y = ['male', 'female', 'female', 'female', 'male', 'male', 'male',
+      'female', 'male', 'female'] 
+
+# we are gonna use a Decision Tree 
+# https://en.wikipedia.org/wiki/Decision_tree
+
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, Y)
+
+prediction = clf.predict([[180, 79, 44]])
+
+print prediction
+
+
 def shopping_list_post():
 	  # --> ['5', '6', '8']
 	  # print(type(request.form['text']))
