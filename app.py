@@ -36,25 +36,9 @@ def add_numbers_post():
 
 
 @app.route('/shopping_list', methods=['GET','POST'])
-
-
-def person(birthdate):
-	
-
-def age():
-        today = datetime.date.today()
-        age = today.year - self.birthdate.year
-        return age
-
-
-def calculate_age():
-    print(birth_year.get())
-    print(birth_month.get())
-    print(birth_day.get())
-    persona = person('Joni', datetime.date(int(birth_year.get()),
-                                        int(birth_month.get()),
-                                        int(birth_day.get()))) 
-
+def shopping_list_post():
+	  # --> ['5', '6', '8']
+	  # print(type(request.form['text']))
 
     if request.method == 'GET':
       return render_template('shopping_list.html')
