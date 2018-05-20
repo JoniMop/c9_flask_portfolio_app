@@ -521,9 +521,5 @@ div#maincontent {
   padding: 20px;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around
-  border: 7px solid black;
-  width: 85%;
-  margin: 0 auto;
-  text-align: center;
+  justify-content: space-around;
 }
