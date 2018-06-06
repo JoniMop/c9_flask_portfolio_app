@@ -9,6 +9,7 @@ body {
 }
 p {
   font-size: 20px;
+  text-align: center;
 }
 p.small {
   font-size: 16px;
