@@ -523,6 +523,7 @@ div#maincontent {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  text-align: center;
 }
 
 .container-1 {
